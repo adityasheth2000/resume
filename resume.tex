@@ -1,0 +1,124 @@
+\documentclass[10pt,a4paper]{article}
+
+% Packages
+\usepackage[margin=0.55in,top=0.45in,bottom=0.45in]{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{array}
+
+% Colors
+\definecolor{accent}{HTML}{1155cc}
+\definecolor{dark}{HTML}{222222}
+
+% Hyperlinks
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=dark
+}
+
+% Section styling
+\titleformat{\section}
+  {\large\bfseries\color{dark}\uppercase}
+  {}{0em}{}
+  [{\titlerule[0.8pt]}]
+\titlespacing*{\section}{0pt}{6pt}{2pt}
+
+% Spacing
+\setlist[itemize]{
+  leftmargin=1.1em,
+  topsep=1pt,
+  itemsep=0.5pt,
+  parsep=0pt,
+  after=\vspace{-1pt}
+}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Custom commands
+% #1 = Company (bold), #2 = Date (bold), #3 = Role (italic), #4 = Location (italic)
+\newcommand{\role}[4]{%
+  \vspace{3pt}%
+  \noindent{\large \textbf{#1}} \hfill \textbf{#2}\\%
+  \noindent{\itshape #3} \hfill \textit{#4}\vspace{-1pt}%
+}
+
+\newcommand{\edurole}[4]{%
+  \vspace{2pt}%
+  \noindent{\large \textbf{#1}} \hfill \textbf{#2}\\%
+  \noindent{\itshape #3} \hfill \textit{#4}%
+}
+
+\begin{document}
+\pagestyle{empty}
+
+% ==================== HEADER ====================
+\begin{center}
+  {\Huge \textbf{Aditya Sheth}}\\[2pt]
+  {\small
+    Bangalore, India \quad$\cdot$\quad
+    (+91) 9375126539 \quad$\cdot$\quad
+    \hrefmailto{adityasheth2000@gmail.com}{adityasheth2000@gmail.com}\\
+    \href{https://www.linkedin.com/in/adityasheth2000}{LinkedIn} \quad$\cdot$\quad
+    \href{https://github.com/adityasheth2000}{GitHub} \quad$\cdot$\quad
+    \href{https://codeforces.com/profile/aditya_sheth}{Codeforces: 2292 (Master, Top 20 India)}
+  }
+\end{center}
+
+% ==================== SUMMARY ====================
+\section*{Summary}
+Software Engineer with 2+ years of experience building AI-powered products, high-scale distributed systems, and cloud infrastructure. Designed and deployed production AI analytics engines with multi-agent architectures that serve $\sim$30\% of org. Proven track record of reducing cloud costs by \textbf{\$150K+/year} and improving system performance at scale. Competitive programming enthusiast with \textbf{Codeforces Master} rating.
+
+% ==================== EXPERIENCE ====================
+\section*{Experience}
+
+\role{Wayground (formerly Quizizz)}{July 2024 -- Present}{Software Engineer -- II \quad\small{(\textit{Promoted from SDE-I: July 2024 -- June 2025})}}{Bangalore, India}
+\begin{itemize}
+  \item Led company-wide migration from AWS OpenSearch to AWS RDS for search and listing use cases, handling peak traffic of \textbf{10,000 RPM} ($\sim$167 QPS); reduced monthly search infra costs from \textbf{\$28K to \$10K}, saving \textbf{\$200K+/year} while maintaining query performance and reliability
+  \item Engineered Go-based analytics API serving real-time funnel analysis and user flow visualization on BigQuery, enabling product teams to analyze conversion patterns across millions of daily events with advanced segmentation (user cohorts, A/B test splits, per-step behavioral filtering, item-specific tracking)
+  \item Architected AI analytics engine on OpenClaw framework with multi-agent architecture: connected BigQuery (50+ tables) and GTM data store (129K accounts) to Slack for natural-language analytics, automated PRs/infra changes, and interactive dashboard generation; adopted by $\sim$30\% of org to accelerate product and sales decisions, averaging 10+ turns per conversation; earned CEO-wide recognition
+  \item Led domain migration from quizizz.com to wayground.com using CloudFront and DNS, achieving seamless user redirection with under \textbf{2 minutes} downtime
+  \item Migrated from AWS-managed NAT Gateway to self-hosted HA NAT instance, cutting NAT costs by \textbf{70\%} (from \$25K/mo to \$8K/mo; \textbf{\$17K/mo savings}, $\sim$7\% of total infra costs)
+  \item Own Airflow infrastructure and DAGs syncing data from MongoDB and Cassandra to BigQuery; built reconciliation DAG to validate data consistency across change streams (MongoDB CDC, Cassandra CDC) and BigQuery
+  \item Standardized CI pipelines across company, enabling Kubernetes migration and replacing unstable legacy code with streamlined Jenkins-based process, improving deployment stability and developer efficiency
+\end{itemize}
+
+\role{Media.net}{July 2023 -- July 2024}{Software Engineer I}{Bangalore, India}
+\begin{itemize}
+  \item Built LTV estimation system for Firefox extension users by leveraging Chrome historical data, enabling detailed cohort analysis for business decision-making despite Firefox's limited data availability
+\end{itemize}
+
+\role{Media.net}{Jan 2023 -- July 2023}{Software Engineer Intern}{Bangalore, India}
+\begin{itemize}
+  \item Deployed fixed-variance Thompson Sampling algorithm to optimize job rankings for a new job-search platform, boosting \textbf{Revenue per Impression (RPI) by 20\%}
+\end{itemize}
+
+\role{Media.net}{May 2022 -- July 2022}{Software Engineer Intern}{Bangalore, India}
+\begin{itemize}
+  \item Improved job-search platform search engine by extracting user intent (company, title, job type) with \textbf{97\% accuracy} and \textbf{5x faster} processing using Redis caching; implemented typing and spacing corrections via BK-tree data structure and dynamic programming
+\end{itemize}
+
+% ==================== TECHNICAL SKILLS ====================
+\section*{Technical Skills}
+\textbf{Languages:} Go, Python, Java, JavaScript, TypeScript, SQL\\
+\textbf{Databases:} BigQuery, MongoDB, Cassandra, Redis, PostgreSQL, MySQL (AWS RDS)\\
+\textbf{Cloud \& Infra:} AWS (OpenSearch, RDS, CloudFront, NAT Gateway), GCP, Kubernetes, Jenkins, Airflow, CI/CD, Docker\\
+\textbf{Tools \& Frameworks:} Model Context Protocol (MCP), Claude AI APIs, ChromaDB, CloudFront, DNS\\
+\textbf{Concepts:} Distributed Systems, CDC, A/B Testing, System Design, Data Pipelines
+
+% ==================== EDUCATION ====================
+\section*{Education}
+\edurole{Integrated M.Tech in Computer Science (GPA: 8.9/10)}{Aug 2018 -- Jul 2023}{International Institute of Information Technology Bangalore (IIIT-B)}{Bangalore, India}
+
+% ==================== ACHIEVEMENTS ====================
+\section*{Achievements}
+\begin{itemize}
+  \item \textbf{Codeforces Master} (Rating: 2292) -- Top 20 India; \textbf{CodeChef 6-Star} (Rating: 2248)
+  \item \textbf{ACM-ICPC}: Rank 10 Kanpur Regional (2020); Rank 9 Preliminary (4000+ teams)
+  \item \textbf{Google CodeJam}: India Rank 10 \quad$\cdot$\quad \textbf{Google HashCode}: India Rank 7
+  \item \textbf{IEEEXtreme}: Global Rank 35 \quad$\cdot$\quad \textbf{CodeChef SnackDown Finals}: Top-60 of 75,000+
+\end{itemize}
+
+\end{document}
