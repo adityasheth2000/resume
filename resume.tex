@@ -69,7 +69,7 @@
 
 % ==================== SUMMARY ====================
 \section*{Summary}
-Software Engineer with 2+ years of experience building AI-powered products, high-scale distributed systems, and cloud infrastructure. Designed and deployed production AI analytics engines with multi-agent architectures that serve $\sim$30\% of org. Proven track record of reducing cloud costs by \textbf{\$150K+/year} and improving system performance at scale. Competitive programming enthusiast with \textbf{Codeforces Master} rating.
+Software Engineer with 2+ years of experience building AI-powered products, high-scale distributed systems, and cloud infrastructure. Architected a production multi-agent LLM engine for natural-language SQL generation, saving 50+ engineering hours/week by automating complex BigQuery analytics. Proven track record of reducing cloud costs by \textbf{\$200K+/year} and improving system performance at scale. Competitive programming enthusiast with \textbf{Codeforces Master} rating.
 
 % ==================== EXPERIENCE ====================
 \section*{Experience}
@@ -78,7 +78,7 @@ Software Engineer with 2+ years of experience building AI-powered products, high
 \begin{itemize}
   \item Led company-wide migration from AWS OpenSearch to AWS RDS for search and listing use cases, handling peak traffic of \textbf{10,000 RPM} ($\sim$167 QPS); reduced monthly search infra costs from \textbf{\$28K to \$10K}, saving \textbf{\$200K+/year} while maintaining query performance and reliability
   \item Engineered Go-based analytics API serving real-time funnel analysis and user flow visualization on BigQuery, enabling product teams to analyze conversion patterns across millions of daily events with advanced segmentation (user cohorts, A/B test splits, per-step behavioral filtering, item-specific tracking)
-  \item Architected AI analytics engine on OpenClaw framework with multi-agent architecture: connected BigQuery (50+ tables) and GTM data store (129K accounts) to Slack for natural-language analytics, automated PRs/infra changes, and interactive dashboard generation; adopted by $\sim$30\% of org to accelerate product and sales decisions, averaging 10+ turns per conversation; earned CEO-wide recognition
+  \item Architected production AI analytics engine using multi-agent LLM architecture (OpenClaw framework) interfacing with 50+ BigQuery tables; enabled natural-language querying via Slack with 10+ turn conversational context, saving 50+ engineering hours/week previously spent on manual SQL writing
   \item Led domain migration from quizizz.com to wayground.com using CloudFront and DNS, achieving seamless user redirection with under \textbf{2 minutes} downtime
   \item Migrated from AWS-managed NAT Gateway to self-hosted HA NAT instance, cutting NAT costs by \textbf{70\%} (from \$25K/mo to \$8K/mo; \textbf{\$17K/mo savings}, $\sim$7\% of total infra costs)
   \item Own Airflow infrastructure and DAGs syncing data from MongoDB and Cassandra to BigQuery; built reconciliation DAG to validate data consistency across change streams (MongoDB CDC, Cassandra CDC) and BigQuery
@@ -102,11 +102,10 @@ Software Engineer with 2+ years of experience building AI-powered products, high
 
 % ==================== TECHNICAL SKILLS ====================
 \section*{Technical Skills}
-\textbf{Languages:} Go, Python, Java, JavaScript, TypeScript, SQL\\
-\textbf{Databases:} BigQuery, MongoDB, Cassandra, Redis, PostgreSQL, MySQL (AWS RDS)\\
-\textbf{Cloud \& Infra:} AWS (OpenSearch, RDS, CloudFront, NAT Gateway), GCP, Kubernetes, Jenkins, Airflow, CI/CD, Docker\\
-\textbf{Tools \& Frameworks:} Model Context Protocol (MCP), Claude AI APIs, ChromaDB, CloudFront, DNS\\
-\textbf{Concepts:} Distributed Systems, CDC, A/B Testing, System Design, Data Pipelines
+\textbf{Languages:} Go, Python, C++, JavaScript, TypeScript, SQL\\
+\textbf{Databases:} BigQuery, MongoDB, Cassandra, Redis, PostgreSQL (AWS RDS)\\
+\textbf{Cloud \& Infra:} AWS (OpenSearch, RDS, CloudFront, NAT Gateway, EC2, S3), Kubernetes, Docker, Airflow, Jenkins\\
+\textbf{AI/ML:} MCP (Agent Framework), Claude/OpenAI APIs, ChromaDB
 
 % ==================== EDUCATION ====================
 \section*{Education}
