@@ -1,7 +1,7 @@
 \documentclass[10pt,a4paper]{article}
 
 % Packages
-\usepackage[margin=0.55in,top=0.45in,bottom=0.45in]{geometry}
+\usepackage[margin=0.55in,top=0.4in,bottom=0.4in]{geometry}
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{titlesec}
@@ -40,7 +40,7 @@
 % Custom commands
 % #1 = Company (bold), #2 = Date (bold), #3 = Role (italic), #4 = Location (italic)
 \newcommand{\role}[4]{%
-  \vspace{3pt}%
+  \vspace{1pt}%
   \noindent{\large \textbf{#1}} \hfill \textbf{#2}\\%
   \noindent{\itshape #3} \hfill \textit{#4}\vspace{-1pt}%
 }
@@ -74,7 +74,12 @@ Software Engineer with 3+ years of experience building AI-powered products, high
 % ==================== EXPERIENCE ====================
 \section*{Experience}
 
-\role{Wayground (formerly Quizizz)}{July 2024 -- Present}{Software Engineer -- II \quad\small{(\textit{Promoted from SDE-I: July 2024 -- June 2025})}}{Bangalore, India}
+\role{Eightfold.ai}{June 2026 -- Present}{Senior Engineer}{Bangalore, India}
+\begin{itemize}
+  \item Led the modernization of CI infrastructure: migrated from a fleet of long-running EC2 machines to Kubernetes-native, per-test-suite pods (EKS, Karpenter, spot instances). Impact: cost down \textbf{63\% (\$16.2K $\rightarrow$ \$6.0K/month, $\sim$\$120K/year)}, p90 latency down \textbf{23\% (92 $\rightarrow$ 71 min)}, flakiness down \textbf{31\% (4.1\% $\rightarrow$ 2.8\%)}
+\end{itemize}
+
+\role{Wayground (formerly Quizizz)}{July 2024 -- June 2026}{Software Engineer -- II \quad\small{(\textit{Promoted from SDE-I: July 2024 -- June 2025})}}{Bangalore, India}
 \begin{itemize}
   \item Led company-wide migration from AWS OpenSearch to AWS RDS for search and listing use cases, handling peak traffic of \textbf{10,000 RPM} ($\sim$167 QPS); reduced monthly search infra costs from \textbf{\$28K to \$10K}, saving \textbf{\$200K+/year} while maintaining query performance and reliability
   \item Built Go analytics API on BigQuery for self-serve funnel analysis and user-journey visualization; tracks event-to-event conversion across millions of daily events with cohort segmentation and feature-flag split analysis
